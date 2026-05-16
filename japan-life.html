@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>日本生活导航 - 在日生活常用网站大全</title>
+  <meta name="description" content="日本生活导航，收录在日生活常用网站：入管、签证、税金、年金、My Number、邮便、交通、医疗、防灾、工作、住房、学习等。" />
+  <meta name="keywords" content="日本生活导航,日本常用网站,在日华人,日本签证,日本入管,日本年金,日本税金,日本邮便,日本防灾,Hello Work" />
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --bg: #f5f7fb;
+      --card: #ffffff;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --primary: #2563eb;
+      --primary-dark: #1d4ed8;
+      --border: #e5e7eb;
+      --tag: #eff6ff;
+      --shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+      --radius: 18px;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans SC",
+        "Microsoft YaHei", Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(135deg, #2563eb, #0f172a);
+      color: white;
+      padding: 38px 18px 32px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 30px;
+      margin-bottom: 10px;
+      font-weight: 800;
+    }
+
+    header p {
+      max-width: 760px;
+      margin: 0 auto;
+      color: #dbeafe;
+      font-size: 15px;
+    }
+
+    .top-bar {
+      max-width: 1100px;
+      margin: -26px auto 24px;
+      padding: 0 16px;
+    }
+
+    .search-box {
+      background: white;
+      border-radius: 999px;
+      padding: 12px 18px;
+      box-shadow: var(--shadow);
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .search-box input {
+      border: none;
+      outline: none;
+      flex: 1;
+      font-size: 16px;
+      color: var(--text);
+    }
+
+    .search-box span {
+      color: var(--muted);
+      font-size: 18px;
+    }
+
+    .quick-tags {
+      max-width: 1100px;
+      margin: 0 auto 20px;
+      padding: 0 16px;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .quick-tags button {
+      border: 1px solid var(--border);
+      background: white;
+      color: var(--text);
+      border-radius: 999px;
+      padding: 8px 14px;
+      cursor: pointer;
+      font-size: 14px;
+      transition: 0.2s;
+    }
+
+    .quick-tags button:hover {
+      background: var(--primary);
+      color: white;
+      border-color: var(--primary);
+    }
+
+    main {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 16px 50px;
+    }
+
+    .notice {
+      background: #fff7ed;
+      border: 1px solid #fed7aa;
+      color: #9a3412;
+      padding: 14px 16px;
+      border-radius: var(--radius);
+      margin-bottom: 22px;
+      font-size: 14px;
+    }
+
+    .category {
+      margin-bottom: 28px;
+    }
+
+    .category-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    .category-title h2 {
+      font-size: 22px;
+    }
+
+    .category-title .icon {
+      width: 34px;
+      height: 34px;
+      border-radius: 12px;
+      background: var(--tag);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 16px;
+      box-shadow: 0 4px 15px rgba(15, 23, 42, 0.04);
+      transition: 0.2s;
+      min-height: 132px;
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow);
+      border-color: #bfdbfe;
+    }
+
+    .card h3 {
+      font-size: 17px;
+      margin-bottom: 8px;
+    }
+
+    .card p {
+      color: var(--muted);
+      font-size: 14px;
+      margin-bottom: 12px;
+    }
+
+    .card a {
+      display: inline-block;
+      text-decoration: none;
+      color: white;
+      background: var(--primary);
+      padding: 7px 12px;
+      border-radius: 10px;
+      font-size: 14px;
+      transition: 0.2s;
+    }
+
+    .card a:hover {
+      background: var(--primary-dark);
+    }
+
+    .ad-box {
+      margin: 28px 0;
+      background: #eef2ff;
+      border: 1px dashed #93c5fd;
+      color: #64748b;
+      border-radius: var(--radius);
+      min-height: 90px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    footer {
+      background: #0f172a;
+      color: #cbd5e1;
+      text-align: center;
+      padding: 24px 16px;
+      font-size: 14px;
+    }
+
+    .hidden {
+      display: none !important;
+    }
+
+    @media (max-width: 900px) {
+      .grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      header h1 {
+        font-size: 26px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      header {
+        padding-top: 30px;
+      }
+
+      header h1 {
+        font-size: 24px;
+      }
+
+      .card {
+        min-height: auto;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>日本生活导航</h1>
+  <p>在日本生活常用网站大全：签证、入管、税金、年金、My Number、工作、住房、交通、医疗、防灾、学习等。</p>
+</header>
+
+<div class="top-bar">
+  <div class="search-box">
+    <span>🔍</span>
+    <input type="text" id="searchInput" placeholder="搜索：签证、税金、年金、工作、邮便、地震、防灾..." />
+  </div>
+</div>
+
+<div class="quick-tags">
+  <button onclick="filterKeyword('签证')">签证入管</button>
+  <button onclick="filterKeyword('工作')">找工作</button>
+  <button onclick="filterKeyword('税金')">税金年金</button>
+  <button onclick="filterKeyword('交通')">交通出行</button>
+  <button onclick="filterKeyword('医疗')">医疗健康</button>
+  <button onclick="filterKeyword('防灾')">防灾地震</button>
+  <button onclick="filterKeyword('学习')">日语学习</button>
+  <button onclick="clearSearch()">全部显示</button>
+</div>
+
+<main>
+
+  <div class="notice">
+    温馨提示：涉及签证、税金、年金、保险等重要手续时，请以日本官方网页和窗口说明为准。本页主要用于快速导航。
+  </div>
+
+  <section class="category" data-category="热门 常用">
+    <div class="category-title">
+      <div class="icon">⭐</div>
+      <h2>热门常用</h2>
+    </div>
+
+    <div class="grid">
+      <div class="card" data-keywords="日本 政府 官方 生活">
+        <h3>日本政府门户</h3>
+        <p>日本政府相关信息入口，适合查找官方政策和行政服务。</p>
+        <a href="https://www.japan.go.jp/" target="_blank">打开网站</a>
+      </div>
+
+      <div class="card" data-keywords="外国人 生活 支援 多语言">
+        <h3>外国人生活支援门户</h3>
+        <p>面向在日外国人的生活支援信息，多语言说明。</p>
+        <a href="https://www.moj.go.jp/isa/support/portal/index.html" target="_blank">打开网站</a>
+      </div>
+
+      <div class="card" data-keywords="邮便 邮编 地址 包裹">
+        <h3>日本邮便</h3>
+        <p>邮编查询、寄件、包裹、再配达等常用邮政服务。</p>
+        <a href="https://www.post.japanpost.jp/" target="_blank">打开网站</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="ad-box">
+    横幅广告位 728×90 / 手机端自适应广告位
+  </div>
+
+  <section class="category" data-category="签证 入管 在留卡">
+    <div class="category-title">
+      <div class="icon">🛂</div>
+      <h2>签证 / 入管 / 在留</h2>
+    </div>
+
+    <div class="grid">
+      <div class="card" data-keywords="签证 入管 在留卡 更新 永住 归化">
+        <h3>出入国在留管理厅</h3>
+        <p>在留资格、签证更新、永住、再入国、在留卡相关手续。</p>
+        <a href="https://www.moj.go.jp/isa/" target="_blank">打开网站</a>
+      </div>
+
+      <div class="card" data-keywords="在线申请 在留 更新 入管">
+        <h3>在留在线申请</h3>
+        <p>入管相关在留手续的在线申请入口。</p>
+        <a href="https://www.moj.go.jp/isa/applications/online/onlineshinsei.html" target="_blank">打开网站</a>
+      </div>
+
+      <div class="card" data-keywords="签证 外务省 日本签证">
+        <h3>外务省签证信息</h3>
+        <p>日本签证、入境、领事馆相关信息。</p>
+        <a href="https://www.mofa.go.jp/j_info/visit/visa/index.html" target="_blank">打开网站</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="category" data-category="税金 年金 保险 My Number">
+    <div class="category-title">
+      <div class="icon">💴</div>
+      <h2>税金 / 年金 / My Number</h2>
+    </div>
+
+    <div class="grid">
+      <div class="card" data-keywords="税金 确定申告 所得税 消费税">
+        <h3>国税厅</h3>
+        <p>确定申告、所得税、消费税、源泉征收票等税务信息。</p>
+        <a href="https://www.nta.go.jp/" target="_blank">打开网站</a>
+      </div>
+
+      <div class="card" data-keywords="年金 国民年金 厚生年金 保险">
+        <h3>日本年金机构</h3>
+        <p>国民年金、厚生年金、缴费、免除、年金记录查询。</p>
+        <a href="https://www.nenkin.go.jp/" target="_blank">打开网站</a>
+      </div>
+
+      <div class="card" data-keywords="My Number 个人编号 卡 申请">
+        <h3>My Number Card</h3>
+        <p>个人编号卡申请、更新、使用方法相关信息。</p>
+        <a href="https://www.kojinbango-card.go.jp/" target="_blank">打开网站</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="category" data-category="工作 打工 求职">
+    <div class="category-title">
+      <div class="icon">💼</div>
+      <h2>工作 / 打工 / 求职</h2>
+    </div>
+
+    <div class="grid">
+      <div class="card" data-keywords="工作 打工 求职 Hello Work">
+        <h3>Hello Work</h3>
+        <p>日本官方职业介绍、失业保险、求职咨询。</p>
+        <a href="https://www.hellowork.mhlw.go.jp/" target="_blank">打开网站</a>
+      </div>
+
+      <div class="card" data-keywords="外国人 工作 东京 求职">
+        <h3>东京外国人雇用服务中心</h3>
+        <p>面向外国人的就业咨询、求职支援。</p>
+        <a href="https://jsite.mhlw.go.jp/tokyo-foreigner/english.html" target="_blank">打开网站</a>
+      </div>
+
+      <div class="card" data-keywords="外国人 工作 大阪 求职">
+        <h3>大阪外国人雇用服务中心</h3>
+        <p>大阪地区外国人求职、留学生就业支援。</p>
+        <a href="https://en.osaka-foreigner.mhlw.go.jp/osaka-foreigner/" target="_blank">打开网站</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="ad-box">
+    信息流广告位 / 推荐工具位
+  </div>
+
+  <section class="category" data-category="住房 搬家 水电煤">
+    <div class="category-title">
+      <div class="icon">🏠</div>
+      <h2>住房 / 搬家 / 水电煤</h2>
+    </div>
+
+    <div class="grid">
+      <div class="card" data-keywords="租房 住房 不动产">
+        <h3>SUUMO</h3>
+        <p>日本常用租房、买房、不动产搜索网站。</p>
+        <a href="https://suumo.jp/" target="_blank">打开网站</a>
+      </div>
+
+      <div class="card" data-keywords="租房 住房 不动产">
+        <h3>HOME'S</h3>
+        <p>日本租房、房产、搬家相关信息搜索。</p>
+        <a href="https://www.homes.co.jp/" target="_blank">打开网站</a>
+      </div>
+
+      <div class="card" data-keywords="电气 煤气 水道 生活">
+        <h3>生活基础设施查询</h3>
+        <p>建议根据所在城市搜索：市役所 水道局 電気 ガス。</p>
+        <a href="https://www.google.com/search?q=%E5%B8%82%E5%BD%B9%E6%89%80+%E6%B0%B4%E9%81%93+%E9%9B%BB%E6%B0%97+%E3%82%AC%E3%82%B9" target="_blank">搜索</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="category" data-category="交通 地图 电车 飞机">
+    <div class="category-title">
+      <div class="icon">🚃</div>
+      <h2>交通 / 地图 / 出行</h2>
+    </div>
+
+    <div class="grid">
+      <div class="card" data-keywords="交通 电车 换乘 地铁">
+        <h3>Yahoo!路線情報</h3>
+        <p>电车、地铁、新干线换乘查询。</p>
+        <a href="https://transit.yahoo.co.jp/" target="_blank">打开网站</a>
+      </div>
+
+      <div class="card" data-keywords="地图 路线 交通">
+        <h3>Google 地图</h3>
+        <p>地点搜索、路线导航、电车公交步行导航。</p>
+        <a href="https://www.google.com/maps" target="_blank">打开网站</a>
+      </div>
+
+      <div class="card" data-keywords="高速 巴士 夜行巴士">
+        <h3>高速巴士查询</h3>
+        <p>夜行巴士、高速巴士路线查询。</p>
+        <a href="https://www.kousokubus.net/" target="_blank">打开网站</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="category" data-category="医疗 健康 药店 医院">
+    <div class="category-title">
+      <div class="icon">🏥</div>
+      <h2>医疗 / 健康 / 医院</h2>
+    </div>
+
+    <div class="grid">
+      <div class="card" data-keywords="医院 医疗 外国人 多语言">
+        <h3>外国人医疗机构搜索</h3>
+        <p>查找可外语对应的医疗机构。</p>
+        <a href="https://www.jnto.go.jp/emergency/eng/mi_guide.html" target="_blank">打开网站</a>
+      </div>
+
+      <div class="card" data-keywords="药 医药品 药店">
+        <h3>药品信息搜索</h3>
+        <p>查询日本药品说明、成分和注意事项。</p>
+        <a href="https://www.pmda.go.jp/" target="_blank">打开网站</a>
+      </div>
+
+      <div class="card" data-keywords="急病 救急 医院 夜间">
+        <h3>急病医院搜索</h3>
+        <p>可按所在城市搜索夜间急诊、休日诊疗。</p>
+        <a href="https://www.google.com/search?q=%E5%A4%9C%E9%96%93+%E6%95%91%E6%80%A5+%E7%97%85%E9%99%A2+%E8%BF%91%E3%81%8F" target="_blank">搜索</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="category" data-category="防灾 天气 地震 台风">
+    <div class="category-title">
+      <div class="icon">🌪️</div>
+      <h2>防灾 / 天气 / 地震</h2>
+    </div>
+
+    <div class="grid">
+      <div class="card" data-keywords="天气 台风 地震 气象厅 防灾">
+        <h3>日本气象厅</h3>
+        <p>天气、台风、地震、津波、防灾警报。</p>
+        <a href="https://www.jma.go.jp/" target="_blank">打开网站</a>
+      </div>
+
+      <div class="card" data-keywords="防灾 避难 地震 台风">
+        <h3>NHK 防灾信息</h3>
+        <p>灾害新闻、避难信息、地震台风相关报道。</p>
+        <a href="https://www3.nhk.or.jp/news/" target="_blank">打开网站</a>
+      </div>
+
+      <div class="card" data-keywords="灾害 避难所 地图">
+        <h3>避难所搜索</h3>
+        <p>搜索附近避难所、防灾地图。</p>
+        <a href="https://www.google.com/search?q=%E9%81%BF%E9%9B%A3%E6%89%80+%E8%BF%91%E3%81%8F" target="_blank">搜索</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="ad-box">
+    横幅广告位 / Google AdSense 预留
+  </div>
+
+  <section class="category" data-category="警察 安全 遗失物">
+    <div class="category-title">
+      <div class="icon">👮</div>
+      <h2>安全 / 警察 / 遗失物</h2>
+    </div>
+
+    <div class="grid">
+      <div class="card" data-keywords="警察 遗失物 丢东西">
+        <h3>警察厅遗失物信息</h3>
+        <p>丢失钱包、手机、证件时，可查询遗失物相关信息。</p>
+        <a href="https://www.npa.go.jp/bureau/soumu/ishitsubutsu/otoshimono/" target="_blank">打开网站</a>
+      </div>
+
+      <div class="card" data-keywords="东京 警察 遗失物">
+        <h3>警视厅遗失物</h3>
+        <p>东京地区遗失物、落し物相关查询。</p>
+        <a href="https://www.keishicho.metro.tokyo.lg.jp/" target="_blank">打开网站</a>
+      </div>
+
+      <div class="card" data-keywords="报警 110 119 安全">
+        <h3>紧急电话说明</h3>
+        <p>日本报警110，火灾和急救119。紧急情况请直接拨打电话。</p>
+        <a href="https://www.google.com/search?q=%E6%97%A5%E6%9C%AC+110+119+%E7%B7%8A%E6%80%A5%E9%9B%BB%E8%A9%B1" target="_blank">查看说明</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="category" data-category="学习 日语 考试">
+    <div class="category-title">
+      <div class="icon">📚</div>
+      <h2>学习 / 日语 / 考试</h2>
+    </div>
+
+    <div class="grid">
+      <div class="card" data-keywords="日语 学习 JLPT">
+        <h3>JLPT 日本语能力测试</h3>
+        <p>JLPT N1-N5考试信息、报名、成绩查询。</p>
+        <a href="https://www.jlpt.jp/" target="_blank">打开网站</a>
+      </div>
+
+      <div class="card" data-keywords="日语 词典 翻译">
+        <h3>Weblio 日语词典</h3>
+        <p>日语单词、例句、汉字、同义词查询。</p>
+        <a href="https://www.weblio.jp/" target="_blank">打开网站</a>
+      </div>
+
+      <div class="card" data-keywords="特定技能 考试 建筑">
+        <h3>特定技能考试信息</h3>
+        <p>特定技能考试、评价试验、相关官方信息查询。</p>
+        <a href="https://www.ssw.go.jp/" target="_blank">打开网站</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="category" data-category="购物 二手 生活">
+    <div class="category-title">
+      <div class="icon">🛒</div>
+      <h2>购物 / 二手 / 生活服务</h2>
+    </div>
+
+    <div class="grid">
+      <div class="card" data-keywords="购物 网购 亚马逊">
+        <h3>Amazon Japan</h3>
+        <p>日本常用网购平台，生活用品、电子产品、食品等。</p>
+        <a href="https://www.amazon.co.jp/" target="_blank">打开网站</a>
+      </div>
+
+      <div class="card" data-keywords="二手 闲置 购物">
+        <h3>Mercari</h3>
+        <p>日本常用二手交易平台，适合买卖闲置物品。</p>
+        <a href="https://jp.mercari.com/" target="_blank">打开网站</a>
+      </div>
+
+      <div class="card" data-keywords="价格 比价 购物">
+        <h3>価格.com</h3>
+        <p>家电、手机、电脑、网络套餐等价格比较。</p>
+        <a href="https://kakaku.com/" target="_blank">打开网站</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <p>© 2026 日本生活导航 | 常用网站快速入口</p>
+  <p>建议收藏本页，重要手续请以官方网站为准。</p>
+</footer>
+
+<script>
+  const searchInput = document.getElementById("searchInput");
+
+  searchInput.addEventListener("input", function () {
+    const keyword = this.value.trim().toLowerCase();
+    searchCards(keyword);
+  });
+
+  function filterKeyword(keyword) {
+    searchInput.value = keyword;
+    searchCards(keyword.toLowerCase());
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+
+  function clearSearch() {
+    searchInput.value = "";
+    searchCards("");
+  }
+
+  function searchCards(keyword) {
+    const categories = document.querySelectorAll(".category");
+
+    categories.forEach(category => {
+      const cards = category.querySelectorAll(".card");
+      let hasVisibleCard = false;
+
+      cards.forEach(card => {
+        const text = (
+          card.innerText +
+          " " +
+          card.getAttribute("data-keywords") +
+          " " +
+          category.getAttribute("data-category")
+        ).toLowerCase();
+
+        if (text.includes(keyword)) {
+          card.classList.remove("hidden");
+          hasVisibleCard = true;
+        } else {
+          card.classList.add("hidden");
+        }
+      });
+
+      if (hasVisibleCard || keyword === "") {
+        category.classList.remove("hidden");
+      } else {
+        category.classList.add("hidden");
+      }
+    });
+  }
+</script>
+
+</body>
+</html>
